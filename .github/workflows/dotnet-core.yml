@@ -1,4 +1,4 @@
-name: .NET Core
+name: Build
 
 on:
   push:
@@ -22,6 +22,16 @@ jobs:
         dotnet tool restore 
         dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --nologo --configuration Release --no-restore /WarnAsError
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --nologo --no-restore --verbosity minimal
+    - name: Notify Slack on failure
+      uses: 8398a7/action-slack@v2
+      if: failure()
+      with:
+        status: ${{ job.status }}
+        text: ${{ env.GITHUB_REF }} Build and Test failure !!!
+        author_name: ${{ env.GITHUB_REPOSITORY }} ${{ env.GITHUB_WORKFLOW }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

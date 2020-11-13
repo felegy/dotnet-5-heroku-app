@@ -10,17 +10,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{5251FD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D2057756-562B-4A24-9313-E0C76F19FDF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "worker", "src\worker\worker.csproj", "{2750B92B-F7EF-4C8C-A3AA-46093D869DB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Worker", "src\worker\App.Worker.csproj", "{2750B92B-F7EF-4C8C-A3AA-46093D869DB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web", "src\web\web.csproj", "{A45BD356-366C-4D5C-AE9A-68C321EC1D88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Web", "src\web\App.Web.csproj", "{A45BD356-366C-4D5C-AE9A-68C321EC1D88}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2879CD6F-8FE2-4BD1-B928-2E2D0CD7FB46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web.tests", "tests\web.tests\web.tests.csproj", "{B8E6E32A-13A6-4675-B17C-74F46FFDE6B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Web.Tests", "tests\web.tests\App.Web.Tests.csproj", "{B8E6E32A-13A6-4675-B17C-74F46FFDE6B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "worker.tests", "tests\worker.tests\worker.tests.csproj", "{F3A616ED-F99F-47D2-BC13-697D15E15BF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Worker.Tests", "tests\worker.tests\App.Worker.Tests.csproj", "{F3A616ED-F99F-47D2-BC13-697D15E15BF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib", "src\lib\lib.csproj", "{B9F5ECCE-2B1B-42D2-B47D-CD8B52DB4775}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Lib", "src\lib\App.Lib.csproj", "{B9F5ECCE-2B1B-42D2-B47D-CD8B52DB4775}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

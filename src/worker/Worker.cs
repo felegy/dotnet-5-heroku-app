@@ -1,4 +1,4 @@
-namespace worker
+namespace App.Worker
 {
     using System;
     using System.Collections.Generic;

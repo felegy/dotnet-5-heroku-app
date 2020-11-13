@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace lib
+﻿namespace App.Lib
 {
+    using System;
+
     public class Class1
     {
     }

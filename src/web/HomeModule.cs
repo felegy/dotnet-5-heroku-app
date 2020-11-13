@@ -1,4 +1,4 @@
-﻿namespace web
+﻿namespace App.Web
 {
     using Carter;
     using Microsoft.AspNetCore.Http;
