@@ -1,0 +1,29 @@
+name: Check Packages
+on:
+  workflow_dispatch:
+    branches: [ master ]
+  schedule:
+    - cron: '0 8 * * 5' # every friday AM 8:00
+jobs:
+  nuget:
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_NOLOGO: 1
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+    - run: |
+        dotnet tool restore
+        dotnet restore
+    - uses: MeilCli/nuget-update-check-action@v3
+      id: outdated
+    - uses: 8398a7/action-slack@v2
+      #if: steps.outdated.outputs.has_nuget_update != 'false'
+      with:
+        status: ${{ job.status }}
+        text: ${{ steps.outdated.outputs.nuget_update_text }}
+        author_name: GitHub Actions
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

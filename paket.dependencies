@@ -1,0 +1,8 @@
+source https://api.nuget.org/v3/index.json
+
+nuget Carter
+nuget coverlet.collector
+nuget Microsoft.Extensions.Hosting
+nuget Microsoft.NET.Test.Sdk
+nuget xunit
+nuget xunit.runner.visualstudio
